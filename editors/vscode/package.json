@@ -19,6 +19,23 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"problemMatchers": [
+			{
+				"name": "odin",
+				"owner": "odin",
+				"source": "odin",
+				"fileLocation": "absolute",
+				"pattern": {
+					"regexp": "^([^\\(]*)?\\((\\d+):(\\d+)\\) (.*)$",
+					"loop": true,
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"message": 4,
+					"kind": "location"
+				}
+			}
+		],
 		"commands": [
 			{
 				"command": "ols.start",
